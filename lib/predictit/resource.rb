@@ -10,6 +10,7 @@ module PredictIt
       response = client.connection.get(url)
       response.body.deep_transform_keys(&:underscore)
     end
+
   end
   
 end

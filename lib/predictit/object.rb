@@ -10,8 +10,8 @@ module PredictIt
       if obj.is_a?(Hash)
         OpenStruct.new(obj.map { |key, val| [key, to_ostruct(val)] }.to_h)
       elsif obj.is_a?(Array)
-        results = obj.map { |o| to_ostruct(o) }
-        OpenStruct.new({ results: results })
+        all = obj.map { |o| to_ostruct(o) }
+        OpenStruct.new({ all: all })
       else
         obj
       end
