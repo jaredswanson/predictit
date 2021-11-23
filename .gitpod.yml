@@ -1,0 +1,11 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: >
+      bundle install
+
+vscode:
+  extensions:
+    - rebornix.ruby
+    - wingrunr21.vscode-ruby
