@@ -12,3 +12,5 @@ gem "rubocop", "~> 1.21"
 gem "pry", "~> 0.14.1"
 
 gem "solargraph", "~> 0.44.2"
+
+gem "minitest", "~> 5.14"

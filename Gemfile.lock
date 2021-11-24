@@ -108,6 +108,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  minitest (~> 5.14)
   predictit!
   pry (~> 0.14.1)
   rake (~> 13.0)
