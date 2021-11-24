@@ -46,6 +46,7 @@ module PredictIt
       market_hash['contracts'] = market_hash['contracts'].collect { |contract| 
         contract_builder(contract)
       }
+      market_hash['time_stamp'] = DateTime.parse(market_hash['time_stamp'])
       to_struct(market_hash)
     end
 
