@@ -31,11 +31,8 @@ market = markets.first
 # or 
 market = markets.find { |mkt| mkt.id == 6867 }
 
-
-# Exploring individual contracts
-contract = market.contracts.first
-# or
-contract = market.contracts.find { |contr| contr.id == 23546 }
+# Contracts
+contracts = markets.collect { |mrkt| mrkt.contracts }.flatten
 ```
 
 ### Individual Market
@@ -43,11 +40,18 @@ Fetch info for an individual market by market id:
 
 ```ruby
 market = PredictIt::Markets.market(6867)
+```
+If you only need info for a single market, the :market method is less resource intensive.
 
-# Exploring individual contracts
+### Exploring Market Contracts
+Select an individual `market` using either method above. Then:
+
+```ruby
 contract = market.contracts.first
-# or
+# find
 contract = market.contracts.find { |contr| contr.id == 23546 }
+# select
+market.contracts.select { |cont| cont.best_buy_no_cost < 0.6 }
 ```
 
 ## Development
