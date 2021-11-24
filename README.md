@@ -51,7 +51,7 @@ contract = market.contracts.first
 # find
 contract = market.contracts.find { |contr| contr.id == 23546 }
 # select
-market.contracts.select { |cont| cont.best_buy_no_cost < 0.6 }
+contracts = market.contracts.select { |cont| cont.best_buy_no_cost < 0.6 }
 ```
 
 ## Development
