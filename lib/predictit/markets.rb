@@ -4,21 +4,25 @@ module PredictIt
       @markets_raw = markets_raw || request
     end
 
+    def self.all
+      self.new.markets
+    end
+
     def markets
       @markets ||= @markets_raw.collect { |market| market_builder(market) }
     end
 
     private
 
+    def contract_builder(contract_hash)
+      to_struct(contract_hash)
+    end
+
     def market_builder(market_hash)
       market_hash['contracts'] = market_hash['contracts'].collect { |contract| 
         contract_builder(contract)
       }
       to_struct(market_hash)
-    end
-
-    def contract_builder(contract_hash)
-      to_struct(contract_hash)
     end
 
     def request

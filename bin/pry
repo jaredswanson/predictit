@@ -14,7 +14,10 @@ require 'pry'
 # client = PredictIt::Client.new
 # resource = PredictIt::MarketsResource.new(client)
 # markets = PredictIt::Markets.new(resource.call).markets
-markets = PredictIt::Markets.new.markets
+
+# markets = PredictIt::Markets.new.markets
+
+markets = PredictIt::Markets.all
 
 binding.pry
 
