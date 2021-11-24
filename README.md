@@ -1,8 +1,6 @@
 # Predictit
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/predictit`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Ruby bindings for the [PredictIt]('https://www.predictit.org') api.
 
 ## Installation
 
@@ -22,7 +20,35 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Markets
+Collect all current maket data:
+
+```ruby
+markets = PredictIt::Markets.all
+
+# Exploring Markets
+market = markets.first
+# or 
+market = markets.find { |mkt| mkt.id == 6867 }
+
+
+# Exploring individual contracts
+contract = market.contracts.first
+# or
+contract = market.contracts.find { |contr| contr.id == 23546 }
+```
+
+### Individual Market
+Fetch info for an individual market by market id:
+
+```ruby
+market = PredictIt::Markets.market(6867)
+
+# Exploring individual contracts
+contract = market.contracts.first
+# or
+contract = market.contracts.find { |contr| contr.id == 23546 }
+```
 
 ## Development
 
