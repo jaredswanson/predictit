@@ -9,6 +9,7 @@ module PredictIt
   autoload :Resource, 'predictit/resource'
   autoload :Markets, 'predictit/markets'
 
+  autoload :MarketResource, 'predictit/resources/market'
   autoload :MarketsResource, 'predictit/resources/markets'
 
   class Error < StandardError; end

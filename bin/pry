@@ -17,7 +17,8 @@ require 'pry'
 
 # markets = PredictIt::Markets.new.markets
 
-markets = PredictIt::Markets.all
+# markets = PredictIt::Markets.all
+market = PredictIt::Markets.market(6867)
 
 binding.pry
 
