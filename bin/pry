@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "predictit"
+require 'pry'
+
+# You can add fixtures and/or initialization code here to make experimenting
+# with your gem easier. You can also use a different console, if you like.
+
+# (If you use this, don't forget to add pry to your Gemfile!)
+# require "pry"
+# Pry.start
+# client = PredictIt::Client.new
+# resource = PredictIt::MarketsResource.new(client)
+# markets = PredictIt::Markets.new(resource.call).markets
+markets = PredictIt::Markets.new.markets
+
+binding.pry
+
+
+Pry.start(__FILE__)

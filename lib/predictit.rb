@@ -7,6 +7,7 @@ module PredictIt
   autoload :Error, 'predictit/error'
   autoload :Object, 'predictit/object'
   autoload :Resource, 'predictit/resource'
+  autoload :Markets, 'predictit/markets'
 
   autoload :MarketsResource, 'predictit/resources/markets'
 
